@@ -14,7 +14,8 @@ router.get('/:id',  (req,res)=>{
 				//var test=JSON.parse(JSON.stringify(rows[0]));
 				//console.log(test.name);
 				//res.send(rows[0]);
-				console.log(result);
+				console.log("Successfully update the database");
+				res.send("Successfully update the database");
 			}else{
 				console.log(err);	
 				res.send(err);
@@ -22,6 +23,5 @@ router.get('/:id',  (req,res)=>{
 	   });
 
 })
-
 
 module.exports = router;
