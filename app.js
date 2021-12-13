@@ -2,7 +2,7 @@ var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
-//var logger = require('morgan');
+var logger = require('morgan');
 var mongoose = require('mongoose');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -47,10 +47,6 @@ app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use((req,res,next)=>{
-	console.log('method:',req.method);
-	next();
-});
 
 console.log(__dirname);
 
@@ -66,8 +62,10 @@ app.get('/inventory', (req,res)=>{
 			console.log(rows[0].name);
 			//console.log('Row: ' + JSON.stringify(rows[0]));
 			var test=JSON.parse(JSON.stringify(rows[0]));
-			console.log(test.name);
+			console.log("API Error: test2");
+			console.log("Successfully update the database 12/12");
 			res.send(rows);
+			
 		}else{
 			console.log(err);	
 			res.send(err);

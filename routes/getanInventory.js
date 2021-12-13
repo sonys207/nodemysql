@@ -14,7 +14,8 @@ router.get('/:id',  (req,res)=>{
 				//var test=JSON.parse(JSON.stringify(rows[0]));
 				//console.log(test.name);
 				//res.send(rows[0]);
-				console.log("Successfully update the database");
+				console.log("API Error: test1");
+				console.log("Successfully update the database 12/12");
 				res.send("Successfully update the database");
 			}else{
 				console.log(err);	
