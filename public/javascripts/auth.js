@@ -17,8 +17,9 @@ loginForm.addEventListener('submit', (e) => {
    // loginForm.action = "/users";        
   //  loginForm.method = "post";        
 //	loginForm.submit();
-
-location.href="/users?email=jichen@qq.com&password=123wertyu";
+  location.href="https://www.google.ca/";
+  
+//location.href="/users?email=jichen@qq.com&password=123wertyu";
   // const email = loginForm.email.value;
   // const password = loginForm.password.value;
   // firebase.auth().signInWithEmailAndPassword(email, password)
